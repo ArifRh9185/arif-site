@@ -1,0 +1,227 @@
+* {
+    font-family:'Sora', sans-serif;
+    font-size: 1rem;
+}
+
+.card {
+    border:none!important;
+}
+.bd-sidebar {
+    position: -webkit-sticky;
+    position: sticky;
+    display: block !important;
+    padding-left: .25rem;
+    margin-left: -.25rem;
+    top: 70px;
+    max-height: calc(100vh - 6rem);
+    overflow-y: auto; /* Membuat konten di dalamnya dapat digulir jika melebihi tinggi maksimum */
+}
+
+.bd-sidebar::-webkit-scrollbar{
+    width: 2px;
+}
+
+.main {
+    margin-top: 4rem!important;
+}
+.aside {
+    overflow-y: scroll;
+}
+
+.cards {
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 15px;
+    width: 100%;
+    overflow-x: scroll;
+    
+  }
+
+  .cards::-webkit-scrollbar {
+    width: 0px;
+  }
+  
+  .cards .red {
+    background-color: #f43f5e;
+
+  }
+  
+  .cards .blue {
+    background-color: #3b82f6;
+
+  }
+  
+  .cards .green {
+    background-color: #22c55e;
+
+  }
+  .cards .work {
+    background-image: url(../img/gear.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+  .cards .item .card {
+    display: flex;
+    align-items: end;
+    justify-content: center;
+    flex-direction: column;
+    text-align: start   ;
+    min-height: 100px;
+    min-width: 250px;
+    border-radius: 7px;
+    cursor: pointer;
+    transition: 400ms;
+    margin-top: 20px;
+    
+  }
+  .item{
+    transition: 400ms;
+
+  }
+  .cards .item button {
+    padding: 10px 0;
+  }
+  .cards .item button P{
+    line-height: 1.1;
+    width: 50%;
+  }
+  .cards .item P{
+    color: rgba(0, 0, 0, 0.7);
+    font-size: .8rem;
+  }
+  
+  .cards .card p.tip {
+    font-size: 1em;
+    font-weight: 700;
+  }
+  
+  .cards .card p.second-text {
+    font-size: .7em;
+  }
+  
+  .cards .item:hover {
+    transform: scale(.9, .9);
+  }
+
+
+  .idm {
+    background-image: url(../img/indomaret.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
+  .ace {
+    background-image: url(../img/ace.png);
+    background-repeat: no-repeat;
+    background-size: 100px;
+    background-position-y: 10px;
+    background-position-x: 10px;
+  }
+.info {
+    rotate: 30deg;
+    top: 16px;
+    left: 235px!important;;
+}
+
+/* card  */
+
+
+.e-card {
+    background: transparent;
+    box-shadow: 0px 8px 28px -9px rgba(0,0,0,0.45);
+    display: flex;
+    position: relative;
+    min-width: 200px;
+    height: 100px;
+    border-radius: 16px;
+    overflow: hidden;
+    text-align: center;
+    align-items: center;
+    justify-content: center ;
+  }
+.skills-item {
+    width: 100%;
+    overflow: auto;
+}
+  
+  .wave {
+    position: absolute;
+    width: 540px;
+    height: 700px;
+    opacity: 0.6;
+    left: 0;
+    top: 0;
+    margin-left: -50%;
+    margin-top: -70%;
+    background: linear-gradient(744deg,#af40ff,#5b42f3 60%,#00ddeb);
+  }
+  
+  .icon {
+    font-size: 4rem;
+    text-align: center;
+  }
+  
+
+  .wave:nth-child(2),
+  .wave:nth-child(3) {
+    top: 210px;
+  }
+  
+  .playing .wave {
+    border-radius: 40%;
+    animation: wave 3000ms infinite linear;
+  }
+  
+  .wave {
+    border-radius: 40%;
+    animation: wave 55s infinite linear;
+  }
+  
+  .playing .wave:nth-child(2) {
+    animation-duration: 4000ms;
+  }
+  
+  .wave:nth-child(2) {
+    animation-duration: 50s;
+  }
+  
+  .playing .wave:nth-child(3) {
+    animation-duration: 5000ms;
+  }
+  
+  .wave:nth-child(3) {
+    animation-duration: 45s;
+  }
+  
+  @keyframes wave {
+    0% {
+      transform: rotate(0deg);
+    }
+  
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+  /* loading bar */
+  #loading-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #007bff; /* warna loading bar */
+    z-index: 9999;
+  }
+  
+  @keyframes fillAnimation {
+    0% { width: 0; }
+    100% { width: 100%; }
+}
+
+#loading-bar-inner {
+    height: 100%;
+    background-color: #fff; /* warna loading bar dalam */
+    width: 0;
+    animation: fillAnimation 0.9s linear forwards; /* Menggunakan keyframes animation */
+}

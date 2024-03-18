@@ -1,0 +1,266 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Portfolio.me</title>
+    <!-- style -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/app.css">
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sora:wght@100..800&display=swap" rel="stylesheet">
+    <!-- icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <!-- typeit -->
+    <script src="https://unpkg.com/typeit@8.7.1/dist/index.umd.js"></script>
+    <!-- ajax -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- animation -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+  </head>
+  <body>
+    <div id="loading-bar" style="display: none;">
+      <div id="loading-bar-inner"></div>
+    </div>
+    
+    <header>
+        <!-- navbar -->
+        <nav class="navbar navbar-expand-md fixed-top shadow-sm bg-body">
+            <div class="container">
+                <button class="btn btn d-lg-none navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasResponsive" aria-controls="offcanvasResponsive"><i class="bi bi-three-dots"></i></button>
+                <a class="navbar-brand text-primary fw-bold " id="homeBtn" href="index.html">Arif Site</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                  <i class="bi bi-list"></i>
+                </button>
+              <div class="collapse navbar-collapse flex-row justify-content-between" id="navbarNavAltMarkup">
+                <div class="navbar-nav fw-medium">
+                    <a class="nav-link active text-primary" aria-current="page" id="homeBtn" href="index.html">Home</a>  
+                    <a class="nav-link" href="#">Quiz</a>
+                    <a class="nav-link" href="#">Game</a>
+                    <a class="nav-link" href="#">Contact</a>
+                </div>
+                <div class="social-cta gap-3 navbar-nav flex-row text-center">
+                  <a href="https://www.facebook.com/avenged.arifsevenfold/"><i class="bi bi-facebook"></i></a>
+                  <a href="https://github.com/ArifRh9185"><i class="bi bi-github"></i></a>
+                  <a href="https://www.tiktok.com/@aa.pinn?is_from_webapp=1&sender_device=pc"><i class="bi bi-tiktok"></i></a>
+                  <a href="https://www.linkedin.com/in/arif-rahman-hidayat-261601235/"><i class="bi bi-linkedin"></i></a>
+                </div>
+                </div>
+               
+            </div>
+          </nav>
+        <!-- end navbar -->
+    </header>
+
+    <div class="container-fluid my-3 px-5 main">
+      <div class="row py-3 ">
+        <aside class="bd-sidebar col-md-3 position-sticky " style="z-index: 999;">
+            <div class="offcanvas-md offcanvas-end gap-3" tabindex="-1" id="offcanvasResponsive" aria-labelledby="offcanvasResponsiveLabel"> 
+              <div class="offcanvas-header">
+                <h5 class="offcanvas-title" id="offcanvasResponsiveLabel">Profile and Nav</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#offcanvasResponsive" aria-label="Close"></button>
+              </div>
+
+              <div class="offcanvas-body d-flex">
+                <!-- profile cta -->
+                <div class="card">
+                  <img src="img/Logo-28-02-24.jpg" class="card-img-top border rounded-4" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title fs-6">Arif Rahman Hidayat <i class="bi bi-patch-check"></i></h5>
+                    <p class="card-text fs-6">@aa.pinn</p>
+                    <hr>
+                    <!-- nav -->
+                    <div class="d-flex align-items-start">
+                      <div class="nav flex-column nav-pills me-3 col-12 " id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                        <button class="nav-link border m-1" id="about-btn" data-bs-toggle="pill"  type="button"><i class="bi bi-badge-ar-fill"></i> About</button>
+                        <button class="nav-link border m-1" id="projects-btn" data-bs-toggle="pill"  type="button">Projects</button>
+                        <button class="nav-link border m-1" id="blog-btn" data-bs-toggle="pill"  type="button">Blog</button>
+                        <button class="nav-link border m-1" id="learn-btn" data-bs-toggle="pill"  type="button">Learn</button>
+                        <button class="nav-link border m-1" id="roadmap-btn" data-bs-toggle="pill"  type="button">Roadmap</button>
+                        <button class="nav-link border" id="dashboard-btn" data-bs-toggle="pill"  type="button">Dashboard</button>
+                       
+                      </div>
+                     
+                    </div>
+                  </div>
+                </div>
+                <!-- end profile cta -->
+                
+              </div>
+            </div>
+        </aside>
+
+            <main class="col-md-9 pe-md-5 pt-2 text-dark-emphasis "
+            data-aos="fade-left"
+            data-aos-anchor="#example-anchor"
+            data-aos-duration="800"
+            id="content" style="text-align: justify; line-height: 2;">
+            <!-- intro -->
+              <div class="intro">
+                <h1 class="fs-2 text-body" id="heading1"></h1>
+                <p><i class="bi bi-dot"></i> Remote Worker <i class="bi bi-dot"></i> Based in Bekasi</p>
+                <p>Passionate and seasoned Software Engineer with a strong focus on frontend development. Proficient in TypeScript and well-versed in all aspects of web technologies. Collaborative team player dedicated to delivering efficient, scalable, and visually appealing web applications.</p>
+              </div>
+              <!-- end intro -->
+              <hr>
+              <!-- article -->
+              <div class="article">
+                <h5 class="text-body"><i class="bi bi-journal-text "></i> Latest Article</h5 >
+                <p> My latest article</p>
+                <div class="cards ">
+                  <div class="item">
+                    <button class="card red work">
+                      <p class="tip">Hover Me</p>
+                      <p class="second-text">Lorem Ipsum</p>
+                    </button>
+                    <p class="title">My first build website</p>
+                  </div>
+                  <div class="item">
+                    <button class="card green work">
+                      <p class="tip">Hover Me</p>
+                      <p class="second-text">Lorem Ipsum</p>
+                    </button>
+                    <p class="title">My first build website</p>
+                  </div>
+                  <div class="item">
+                    <button class="card blue work">
+                      <p class="tip">Hover Me</p>
+                      <p class="second-text">Lorem Ipsum</p>
+                    </button>
+                    <p class="title">My first build website</p>
+                  </div>
+                  <div class="item">
+                    <button class="card red work">
+                      <p class="tip">Hover Me</p>
+                      <p class="second-text">Lorem Ipsum</p>
+                    </button>
+                    <p class="title">My first build website</p>
+                  </div>
+                </div>
+              </div>
+              <!-- end article -->
+              <hr>
+              <!-- career -->
+              <div class="career">
+                <h5 class="text-body"><i class="bi bi-menu-button-wide-fill"></i> Career</h5>
+                <p > My proffesional career journey</p>
+                <p>Passionate and seasoned Software Engineer with a strong focus on frontend development. Proficient in TypeScript and well-versed in all aspects of web technologies. Collaborative team player dedicated to delivering efficient, scalable, and visually appealing web applications.</p>
+
+                <div class="cards ">
+                  <div class="item">
+                    <button class="card red idm">
+                      <p class="tip">Indomarco Prismatama</p>
+                      <p class="second-text">Store Crew Boy</p>
+                    </button>
+                    <p class="title">Jul 2018 - Jan 2020 / Store Crew Boy</p>
+                  </div>
+                  <div class="item">
+                    <button class="card green idm">
+                      <p class="tip">Indomarco Prismatama</p>
+                      <p class="second-text">Store Junir Leader</p>
+                    </button>
+                    <p class="title">Jan 2020 - Sept 2021 / SJL</p>
+                  </div>
+                  <div class="item">
+                    <button class="card blue idm">
+                      <p class="tip">Indomarco Prismatama</p>
+                      <p class="second-text">Store Senior Leader</p>
+                    </button>
+                    <p class="title">Sept 2020 - Oct 2023 / SSL</p>
+                  </div>
+                  <div class="item">
+                    <button class="card red ace">
+                      <p class="tip">Ace Hardware Indonesia</p>
+                      <p class="second-text">Executive Advisor</p>
+                      <span class="position-absolute start-100 translate-middle badge rounded-pill info bg-danger">
+                        Now
+                        <span class="visually-hidden">unread messages</span>
+                      </span>
+                    </button>
+                    <p class="title">Nov 2023 - Present / Executive Adv</p>
+                  </div>
+                </div>
+              </div>
+              <!-- end career -->
+              <hr>
+
+              <!-- skills -->
+              <div class="skills">
+                <h5><i class="bi bi-code-slash"></i> Skills</h5>
+                <p>My coding skills</p>
+                <p>Passionate and seasoned Software Engineer with a strong focus on frontend development. Proficient in TypeScript and well-versed in all aspects of web technologies. Collaborative team player dedicated to delivering efficient, scalable, and visually appealing web applications.</p>
+
+                <div class="d-flex gap-3 skills-item">
+                  <div class="e-card playing ">
+                    <div class="image"></div>
+                    <div class="wave"></div>
+                    <div class="wave"></div>
+                    <div class="wave"></div>
+                    <i class="bi bi-filetype-html icon"></i>
+                  </div>
+                  <div class="e-card playing">
+                    <div class="image"></div>
+                    <div class="wave"></div>
+                    <div class="wave"></div>
+                    <div class="wave"></div>
+                    <i class="bi bi-filetype-css icon"></i>
+                  </div>
+                  <div class="e-card playing">
+                    <div class="image"></div>
+                    <div class="wave"></div>
+                    <div class="wave"></div>
+                    <div class="wave"></div>
+                    <i class="bi bi-filetype-js icon"></i>
+                  </div>
+                  <div class="e-card playing">
+                    <div class="image"></div>
+                    <div class="wave"></div>
+                    <div class="wave"></div>
+                    <div class="wave"></div>
+                    <i class="bi bi-bootstrap icon"></i>
+                  </div>
+                  <div class="e-card playing">
+                    <div class="image"></div>
+                    <div class="wave"></div>
+                    <div class="wave"></div>
+                    <div class="wave"></div>
+                    <i class="bi bi-filetype-scss icon"></i>
+                  </div>
+               </div>
+
+              </div>
+            </main>
+
+
+
+
+
+          </div>
+            
+
+
+   
+    </div>
+
+
+
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="js/script.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+
+
+
+
+  </body>
+</html>
