@@ -225,3 +225,6 @@
     width: 0;
     animation: fillAnimation 0.9s linear forwards; /* Menggunakan keyframes animation */
 }
+.offcanvas-xl {
+  width: 300px !important;
+}
